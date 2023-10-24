@@ -1,0 +1,122 @@
+.footer {
+  &_inner {
+    padding: 34px 0 34px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+  }
+  &_title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  &_nav {
+    gap: 97px;
+  }
+  &_item {
+    margin-bottom: 14px;
+  }
+  &_item:last-child {
+    margin-bottom: 0;
+  }
+  &_link {
+    font-size: 18px;
+    color: #000;
+  }
+  .cards {
+    gap: 10px;
+  }
+  .phone {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    margin-bottom: 20px;
+  }
+  &_copywriting {
+    margin-bottom: 34px;
+    @include flex-all-sb;
+    ul {
+      gap: 24px;
+    }
+    a {
+      font-size: 18px;
+      color: #000;
+    }
+  }
+  &_logo-development {
+    span {
+      font-family: $font-familyR;
+      font-weight: 300;
+      line-height: 120%;
+      margin-right: 31px;
+    }
+  }
+}
+
+@media (max-width: (1280px)) {
+  .footer {
+    &_inner {
+      gap: 20px;
+      grid-template-columns: repeat(2, auto);
+    }
+    &_contacts {
+      display: flex;
+      justify-content: space-between;
+    }
+    &_copywriting {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+@media (max-width: (860px)) {
+  .footer {
+    &_inner {
+      gap: 20px;
+      grid-template-columns: repeat(2, auto);
+    }
+    &_contacts {
+      display: block;
+    }
+    &_nav {
+      display: block;
+    }
+    &_item {
+      &:last-child {
+        margin-bottom: 14px;
+      }
+    }
+  }
+}
+@media (max-width: (860px)) {
+  .footer {
+    &_inner {
+      gap: 20px;
+      grid-template-columns: repeat(2, auto);
+    }
+    &_contacts {
+      display: block;
+    }
+    &_nav {
+      display: block;
+    }
+    &_item {
+      &:last-child {
+        margin-bottom: 14px;
+      }
+    }
+  }
+}
+@media (max-width: (610px)) {
+  .footer {
+    &_inner {
+      grid-template-columns: repeat(1, auto);
+      // justify-content: center;
+    }
+    &_copywriting {
+        align-items: flex-start;
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+}

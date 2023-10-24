@@ -1,0 +1,334 @@
+.hero {
+  margin-bottom: 98px;
+  &_inner {
+    position: relative;
+    background-image: url('../img/hero-bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+    padding-top: 80px;
+    padding-left: 30px;
+    border-radius: 10px;
+    margin-bottom: 98px;
+    .tractor {
+      position: absolute;
+      top: -61px;
+      right: 0;
+    }
+    .cloud {
+      position: absolute;
+      bottom: -51px;
+      right: 209px;
+    }
+  }
+  &_content {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    // margin-bottom: 96px;
+  }
+  &_title {
+    max-width: 770px;
+    font-size: 44px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 17px;
+  }
+  &_desc {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 40px;
+    span {
+      position: relative;
+      display: inline-block;
+      padding: 5px 9.5px 5.5px 11px;
+      border-radius: 20px;
+      font-size: 18px;
+      font-weight: 700;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $orange;
+        border-radius: inherit;
+        transform: rotate(-3.964deg);
+        z-index: -1;
+      }
+    }
+  }
+  &_search {
+    position: relative;
+    display: flex;
+    max-width: 596px;
+    border-radius: 10px;
+    background-color: #fff;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../img/search-left.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+      width: 24px;
+      height: 24px;
+    }
+    input {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      padding: 22.5px 41px 22.5px 58px;
+      width: 100%;
+
+      &::placeholder {
+        color: $silver-grey;
+      }
+    }
+    .btn {
+      margin: 4px 4px 4px auto;
+    }
+  }
+  &_box-modal {
+    position: relative;
+    top: 96px;
+    max-width: 530px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.03);
+    padding: 29px 25px 29px 155px;
+    img {
+      position: absolute;
+      top: -15px;
+      left: -5px;
+    }
+    p{
+      margin: 0;
+    }
+    .text--diferent {
+      color: $orange;
+    }
+  }
+  // стили к блоку --Нужно много запчастей по списку?---
+  &_forms {
+    position: relative;
+    border-radius: 10px;
+    background: $light-white;
+    margin-bottom: 109px;
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../img/trace.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 0;
+      right: 0px;
+      width: 241px;
+      height: 252px;
+    }
+
+    .dowload-forms {
+      .chous {
+        cursor: pointer;
+      }
+      .dowload {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+  &_engine {
+    width: 281px;
+    height: 281px;
+    border-radius: 50%;
+    background-color: $orange;
+    margin: -11px 118px -18px 30px;
+    flex: 0 0 auto;
+    img {
+      position: absolute;
+      width: 319px;
+      height: 277px;
+      top: -7px;
+      left: 35px;
+    }
+  }
+  &_content-form {
+    width: 100%;
+    position: relative;
+    z-index: 20;
+    h2 {
+      margin-top: 34px;
+      margin-bottom: 8px;
+      font-size: 36px;
+      font-weight: 700;
+    }
+    p {
+      max-width: 584px;
+      font-size: 18px;
+      line-height: 140%;
+      margin-bottom: 30px;
+    }
+    form {
+      input {
+        max-width: 315px;
+        width: 100%;
+        padding: 16px 20px;
+        border-radius: 10px;
+        background: #FFF;
+        border: none;
+        margin-right: 10px;
+      }
+      .chous {
+        display: inline-block;
+        position: relative;
+        max-width: 193px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px dashed #F89608;
+        background: #FFF;
+        padding: 14px 0 14px 20px;
+        color: $orange;
+        margin-right: 29px;
+        &::after {
+          content: '';
+          position: absolute;
+          background-image: url('../img/dowload.svg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 13px;
+          width: 25px;
+          height: 25px;
+        }
+      }
+      button {
+        padding: 16px 43px 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: (1080px)) {
+  .hero {
+    &_engine {
+      margin-right: 80px;
+    }
+    &_content-form {
+      form {
+        flex-wrap: wrap;
+        gap: 20px;
+        button {
+          display: block;
+          width: 100%;
+          max-width: unset;
+        }
+        .chous {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: (960px)) {
+  .hero {
+    &_content-form {
+      h2 {
+        // font-size: 32px;
+      }
+    }
+    &_engine {
+      margin-right: 10px;
+    }
+    &_forms {
+      gap: 40px;
+    }
+    &_content-form {
+      form {
+        flex-wrap: wrap;
+        gap: 20px;
+        button {
+          display: block;
+          width: 100%;
+          max-width: unset;
+        }
+        .chous, input {
+          margin-right: 0;
+          width: 100%;
+          max-width: unset;
+        }
+      }
+    }
+  }
+}
+@include small-tablet {
+  .hero {
+    &_inner {
+      padding-right: 30px;
+      margin-bottom: 118px;
+      .cloud {
+        right: 0px;
+      }
+    }
+    &_search {
+      flex-direction: column;
+      background-color: unset;
+      &::before {
+        top: 25%;
+      }
+      input {
+        background-color: #fff;
+        border-radius: 10px;
+      }
+      .btn {
+        display: block;
+        max-width: unset;
+        width: 100%;
+        padding: 18px 81px 18px 82px;
+      }
+    }
+    &_content-form {
+      h2 {
+        margin-top: 0;
+      }
+    }
+    &_forms {
+      flex-direction: column;
+
+    }
+
+  }
+}
+
+@include mobile {
+  .hero {
+    &_title {
+      font-size: 36px;
+    }
+    &_inner {
+      font-size: 32px;
+    }
+    &_search {
+      input {
+        font-size: 22px;
+      }
+      .btn {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+  }
+}

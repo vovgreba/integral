@@ -1,0 +1,40 @@
+.benefits {
+  margin-bottom: 80px;
+  &_title {
+    margin-bottom: 40px;
+  }
+  &_items {
+    gap: 21px;
+  }
+  &_item {
+    max-width: 340px;
+    border-radius: 16px;
+    background-color: $light-white;
+    padding: 0 25px 53px;
+  }
+  &_image {
+    position: relative;
+    width: 199px;
+    height: 167px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      z-index: 5;
+    }
+
+  }
+  &_desc {
+    text-align: center;
+    font-family: $font-familyR;
+    font-weight: 500;
+    font-size: 20px;
+    span {
+      font-weight: 600;
+      line-height: 130%;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero_inner">
+      <img class="tractor" src="./img/tractor.png" alt="tractor">
+      <img class="cloud" src="./img/cloud.png" alt="cloud">
+      <div class="hero_content">
+        <h1 class="hero_title">Запчасти к экскаваторам, каткам, погрузчикам и другой спец. технике</h1>
+        <div class="hero_desc">
+          В наличие более 10000 запчастей, доставим в ваш город в течении
+          <span class="delivery">10 дней</span>
+        </div>
+        <div class="hero_search">
+          <input type="text" placeholder="Укажите каталожный номер запчасти">
+          <button class=" btn btn-figure">Поиск</button>
+        </div>
+      </div>
+      <div class="hero_box-modal">
+        <img src="./img/box.png" alt="box">
+        <p>Если вы сделаете заказ уже сейчас, то <br> ваши запчасти будут у вас уже
+          <span class="text--diferent">27.09.2023</span>
+        </p>
+      </div>
+    </div>
+    <!-- блок Нужно много запчастей по списку? -->
+
+    <div class="hero_forms flex">
+      <div class="hero_engine">
+        <img src="./img/engine.png" alt="engine">
+      </div>
+      <div class="hero_content-form">
+        <h2 class="title">Нужно много запчастей по списку?</h2>
+        <p>
+          Заполните форму и загрузите текстовый документ
+          с наименованиями, которые ищите и мы поможем составить заказ
+        </p>
+        <form id="application-form" class="dowload-forms flex" method="post" action="">
+          <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+          <label for="dowload" class="chous">Выбрать файл</label>
+          <input type="file" class="dowload" name="file" id="dowload"
+          accept=".txt, .doc, .docx, .csv, .json, .xml,  .xlsx, .pdf">
+          <button class="btn-figure" type="submit">Оставить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

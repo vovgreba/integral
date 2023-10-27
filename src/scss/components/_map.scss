@@ -1,12 +1,8 @@
 .map {
+  position: relative;
   margin-bottom: 60px;
   &_inner {
     position: relative;
-    background-image: url('../img/map.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 0;
-    left: 0;
     max-width: 1420px;
     width: 100%;
     min-height: 630px;
@@ -18,9 +14,10 @@
     height: 96px;
     background-color: #fff;
     border-radius: 50%;
-    top: 163px;
-    left: 484px;
+    top: 23%;
+    left: 41%;
     filter: drop-shadow(0px 0px 20px rgba(215, 215, 215, 0.25));
+    z-index: 10;
   }
   &_contact-form {
     position: absolute;
@@ -28,6 +25,7 @@
     right: 20px;
     max-width: 626px;
     width: 100%;
+    z-index: 10;
   }
   &_contacts {
     border-top-left-radius: 10px;
@@ -36,6 +34,7 @@
     box-shadow: 0px 0px 20px 0px rgba(215, 215, 215, 0.25);
     padding: 40px 34px 34px 30px;
     margin-bottom: 0;
+
     h2 {
       font-size: clamp(1.375rem, 1.23rem + 0.73vw, 1.875rem);
     }
@@ -107,6 +106,22 @@
     }
   }
 }
+.ymaps-2-1-79-map-copyrights-promo {
+  display: none;
+}
+
+
+.ymaps-2-1-79-copyright__link {
+  display: none;
+}
+.ymaps-2-1-79-inner-panes {
+  border-radius: 24px;
+  .ymaps-2-1-79-user-selection-none{
+    position: relative;
+    // cursor: auto !important;
+    z-index: 1000 !important;
+  }
+}
 
 @include small-tablet {
 
@@ -117,13 +132,25 @@
     padding: 20px;
   }
   .map_contact-form {
-    position: relative;
-    top: 0;
-    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
     margin: 0 auto;
   }
 }
-
+@media (max-width: (1300px)) {
+  .map_contact-form {
+    max-width: 550px;
+  }
+  .ymaps-2-1-79-map {
+    min-height: 680px;
+  }
+}
+@media (max-width: (769px)) {
+  .ymaps-2-1-79-map {
+    max-height: 630px;
+  }
+}
 @media (max-width: (640px)) {
   .map {
     .contacts {

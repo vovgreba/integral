@@ -2,15 +2,18 @@ import * as noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
 
 const accordionItems = document.querySelectorAll(".accordion_item");
-
 accordionItems.forEach(item => {
-    const header = item.querySelector(".accordion_header");
+    const header = item.querySelector(".accordion_head");
     const svg = item.querySelector(".accordion_header").nextElementSibling
     const content = item.querySelectorAll(".accordion_content");
-    header.addEventListener("click", () => {
+    header.addEventListener("click", (ev) => {
+      console.log(content)
       content.forEach(el => {
-        el.style.display = el.style.display === "block" ? "none" : "block";
-        svg.style.transform = svg.style.transform === "rotate(0deg)" ? "rotate(180deg)" : "rotate(0deg)";
+        el.classList.toggle('accordion_content-active')
+        svg.classList.toggle('svg-active')
+        // старый способ
+        // el.style.display = el.style.display === "block" ? "none" : "block";
+        // svg.style.transform = svg.style.transform === "rotate(0deg)" ? "rotate(180deg)" : "rotate(0deg)";
       })
     });
 });

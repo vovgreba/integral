@@ -15,7 +15,7 @@
           <span class="block">Нужно много запчастей?</span>
           Оставьте заявку и мы подберем все за вас
         </div>
-        <a href="tel:+74959407896">Перезвоните мне</a>
+        <button type="button" class="header_consultation-call-me">Перезвоните мне</button>
       </div>
     </div>
     <div class="header_main">
@@ -82,6 +82,27 @@
               </svg>
           </button>
           <input type="text" placeholder="Поиск запчастей по каталожному номеру">
+          <div class="search-menu">
+            <nav class="nav" title="">
+              <ul class="list-reset nav__list">
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Двигатели</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Погрузчики ковшевые</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Погрузчики телескопические</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Эскаватор-погрузчик</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Эскаваторы</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Бульдозеры</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Тракторы</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Автогрейдеры</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Катки</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Самосвалы</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Гидравлика</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Краны</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Трансмиссия</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Фильтры</a></li>
+                <li class="nav__item catalog-menu-item"><a href="#" class="nav__link catalog-menu-link">Разное</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
         <button class="shopping-cart" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
@@ -99,6 +120,17 @@
           В корзине 5 товаров <span class="price">(123 333₽)</span>
           <span class="block pos">10 позиций</span>
         </button>
+      </div>
+    </div>
+    <div class="modal-call flex">
+      <div class="modal-call_form">
+        <div class="modal-call_form-title">Заполните данные и мы вам перезвоним</div>
+        <button type="button" class="close">X</button>
+        <form action="">
+          <input type="text" placeholder="Ваше ФИО  ">
+          <input type="text" placeholder="Ваш номер телефона">
+          <button type="submit" class="btn-figure">Перезвоните мне</button>
+        </form>
       </div>
     </div>
   </div>

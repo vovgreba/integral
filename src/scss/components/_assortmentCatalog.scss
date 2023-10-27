@@ -23,9 +23,13 @@ input[type="checkbox"]:checked + .custom-checkbox {
   &_head {
     justify-content: space-between;
     align-items: start;
+    cursor: pointer;
     svg {
       transform: rotate(180deg);
       transition: all 0.5s linear;
+    }
+    .svg-active {
+      transform: rotate(0deg);
     }
   }
   &_box {
@@ -63,9 +67,6 @@ input[type="checkbox"]:checked + .custom-checkbox {
   margin-bottom: 20px;
 }
 
-.accordion_header {
-  cursor: pointer;
-}
 
 .accordion_content {
   display: none;
@@ -83,21 +84,16 @@ input[type="checkbox"]:checked + .custom-checkbox {
     margin-right: 20px;
   }
 }
+.accordion_content-active {
+  display: block;
+}
+
 .assortment {
   .assortmentCatalog_items {
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 340px);
     gap: 40px 20px;
-    .assortment_item:nth-child(-n+3) {
-      .price {
-        display: none;
-      }
-      .price-discount {
-        display: block;
-        opacity: 1;
-      }
-    }
   }
 }
 

@@ -22,6 +22,10 @@
   &_link {
     font-size: 18px;
     color: #000;
+    transition: color 0.4s linear;
+    @include hover {
+      color: $orange;
+    }
   }
   .cards {
     gap: 10px;
@@ -34,6 +38,12 @@
   &_copywriting {
     margin-bottom: 34px;
     @include flex-all-sb;
+    .nav__link {
+      transition: color 0.4s linear;
+      @include hover {
+        color: $orange;
+      }
+    }
     ul {
       gap: 24px;
     }

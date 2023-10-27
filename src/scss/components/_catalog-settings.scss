@@ -24,6 +24,7 @@
 }
 .choice_link {
   color:  $grey-other;
+  font-size: 14px;
 }
 
 .title-choice {
@@ -110,6 +111,10 @@
 }
 
 @include small-tablet {
+  .choice_list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
   .choice_manufacturers, .choice_models {
     margin-bottom: 60px;
   }

@@ -1,0 +1,17 @@
+.tabs {
+  margin-bottom: 40px;
+  .tabs_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .assortment_item {
+    .price {
+      display: none;
+    }
+    .price-discount {
+      display: block;
+      opacity: 1;
+    }
+  }
+}

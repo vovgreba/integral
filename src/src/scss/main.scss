@@ -1,0 +1,24 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/hero";
+@import "./components/catalog";
+@import "./components/_assortment";
+@import "./components/benefits";
+@import "./components/warehouse";
+@import "./components/map";
+@import "./components/footer";
+@import "./components/catalog-settings";
+@import "./components/_assortmentCatalog";
+@import "./components/_singleProduct";
+@import "./components/_cart";
+@import "./components/_textPage";
+@import "./components/_tabs";
+@import "./components/_modal";
+
+

@@ -1,0 +1,40 @@
+.warehouse {
+  margin-bottom: 80px;
+  &_wrapper {
+  }
+  &_desc {
+    font-size: 20px;
+    line-height: 130%;
+    span {
+      color: $orange;
+    }
+  }
+  &_desc, &_title {
+    margin-bottom: 40px;
+  }
+  &_images, &_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  &_img {
+    max-width: 699px;
+  }
+}
+
+@include small-tablet {
+  .warehouse_images {
+    grid-template-columns: 1fr;
+  }
+}
+@include mobile {
+  .warehouse {
+    margin-bottom: 40px;
+  }
+  .warehouse_content {
+    grid-template-columns: 1fr;
+  }
+  .warehouse_title {
+    margin-bottom: 0;
+  }
+}

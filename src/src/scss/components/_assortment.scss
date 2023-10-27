@@ -1,0 +1,204 @@
+.assortment {
+  position: relative;
+  margin-bottom: 140px;
+  &_title {
+    margin-bottom: 64px;
+  }
+  &_items {
+    gap: 20px;
+  }
+  &_img {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 340px;
+    .default--img {
+      opacity: 1;
+    }
+    .hover--img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all 0.3s linear;
+    }
+  }
+  &_controls {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    border-radius: 40px;
+    background: #fff;
+    padding: 6px 10px;
+    opacity: 0;
+    transition: all .5s linear;
+    cursor: pointer;
+    hr {
+      background: rgba(0, 0, 0, 0.06);
+      border: none;
+      width: 1px;
+      height: 26px;
+      margin: 3px 16px 0;
+    }
+  }
+  &_discount {
+    background-color: $red;
+    padding: 3px 16px;
+    border-radius: 4px;
+    max-width: 74px;
+    color: #fff;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    opacity: 0;
+    transition: all .5s linear;
+  }
+  &_part-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: $font-familyM;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 600;
+  }
+  &_item-wrapper {
+    position: relative;
+    z-index: 10;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      box-shadow: 0px 0px 20px 0px rgba(73, 71, 71, 0.25);
+      border-radius: 5px;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.3s linear, transform 0.4s linear;
+      z-index: -5;
+    }
+    &:hover {
+      cursor: initial;
+      &::after {
+        opacity: 1;
+        transform: scale(1); /* Збільшуємо масштаб при hover */
+      }
+    }
+  }
+  &_item {
+    cursor: pointer;
+    transition: all .5s linear;
+    &:hover {
+      .assortment_controls {
+        opacity: 1;
+      }
+      .assortment_discount {
+        opacity: 1;
+      }
+      .default--img {
+        opacity: 0;
+      }
+      .hover--img {
+        opacity: 1;
+      }
+
+    }
+    .part-numbers {
+      display: block;
+      color: $silver-white;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+      margin-bottom: 32px;
+    }
+    .price, .assortment_discount-price {
+      margin-top: 0;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 140%;
+    }
+  }
+  &_discount-price {
+    position: relative;
+    z-index: 20;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    transition: all .5s linear;
+    .price-discount {
+      margin-top: 0;
+      opacity: 1;
+      margin-bottom: 0;
+      span {
+        display: block;
+        color: $dark-grey;
+        color: $orange;
+        font-size: 18px;
+        text-decoration: line-through;
+      }
+
+    }
+    button {
+      font-family: $font-familyR;
+      font-weight: 600;
+      line-height: 140%;
+      font-size: 16px;
+      background-color: $orange;
+      padding: 18px 44px 19px 45px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      gap: 18px;
+      cursor: pointer;
+      transition: all 0.5s linear;
+      @include hover {
+        background-color: $light-orange;
+      }
+    }
+    .price {
+      margin-bottom: 0;
+      display: none;
+    }
+  }
+
+  &_total-control {
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 15px 18.4px 16px 18.3px;
+    gap: 18px;
+    display: none;
+    .plus, .minus {
+      cursor: pointer;
+    }
+    .minus {
+      order: -1;
+    }
+    .plus {
+      order: 1;
+    }
+    .total {
+      user-select: none;
+      order: 0;
+    }
+  }
+}
+
+@media (max-width: (1400px)) {
+  .assortment, .benefits {
+    &_items {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+@include mobile {
+  .title {
+    font-size: 32px;
+  }
+}

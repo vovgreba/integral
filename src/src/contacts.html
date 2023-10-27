@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="container">
+        <nav class="nav  choice_nav">
+          <ul class="list-reset nav__list cart_list choice_list flex">
+            <li class="nav__item"><a href="#" class="nav__link  choice_link">Главная </a></li>
+            <li class="nav__item"><a href="#" class="nav__link  choice_link">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      @include('partials/map.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

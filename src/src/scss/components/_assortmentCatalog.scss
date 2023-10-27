@@ -1,0 +1,237 @@
+input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #EEE;
+  cursor: pointer;
+  display: inline-block;
+  left: -20px;
+
+}
+
+input[type="checkbox"]:checked + .custom-checkbox {
+  background-image: url('../img/check.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+.accordion {
+  &_head {
+    justify-content: space-between;
+    align-items: start;
+    cursor: pointer;
+    svg {
+      transform: rotate(180deg);
+      transition: all 0.5s linear;
+    }
+    .svg-active {
+      transform: rotate(0deg);
+    }
+  }
+  &_box {
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 17px;
+    font-family: $font-familyR;
+    font-size: 15px;
+    font-weight: 400;
+    .range {
+      background: $orange;
+      border: none;
+      border-radius: 1px;
+      outline: none;
+      max-width: 341px;
+      width: 100%;
+    }
+    span {
+      margin-left: 5px;
+      color: $white-grey;
+    }
+    &:first-child {
+      margin-top: 25px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-label {
+    cursor: pointer;
+  }
+}
+
+.accordion_item {
+  margin-bottom: 20px;
+}
+
+
+.accordion_content {
+  display: none;
+  margin-bottom: 40px;
+  input {
+    border-radius: 5px;
+    border: 1px solid #EEE;
+  }
+}
+
+.assortment {
+  aside {
+    max-width: 341px;
+    width: 100%;
+    margin-right: 20px;
+  }
+}
+.accordion_content-active {
+  display: block;
+}
+
+.assortment {
+  .assortmentCatalog_items {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    gap: 40px 20px;
+  }
+}
+
+.pagination {
+  position: absolute;
+  bottom: -125px;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  gap: 10px;
+  &_box {
+    @include flex-all-center;
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid #000;
+    cursor: pointer;
+  }
+  &_prev {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    background:  $light-white;
+    border: none;
+  }
+  &_active,  &_next {
+    background-color: $orange;
+    border: none;
+  }
+}
+.input-with-keypress-0 {
+  margin-left: 36px;
+  margin-right: 13px;
+  max-width: 103px;
+  padding: 9px 22px 9px 19px;
+}
+.input-with-keypress-1{
+  max-width: 138px;
+  padding: 9px 20px 9px 26px;
+}
+.input-with-keypress-0, .input-with-keypress-1 {
+  margin-top: 21px;
+  border: 1px solid red;
+  outline: none;
+}
+.input-with-keypress-0, .input-with-keypress-1 {
+  font-size: 15px;
+}
+
+.slider-keypress {
+  margin-top: 22px;
+  margin-bottom: 37px;
+  padding:  0 16px 0 0px;
+}
+.noUi-connect {
+  background: $orange !important;
+}
+
+.noUi-connects {
+  border-radius: 1px;
+  border: none;
+  background: #F3F3F3;
+  width: 100%;
+  height: 1px;
+}
+
+.noUi-target  {
+  height: 3px !important;
+  border: none !important;
+}
+
+.noUi-touch-area {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-color: $orange;
+  border: none;
+  cursor: pointer;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 19px !important;
+  height: 19px !important;
+  top: -9px !important;
+  border-radius: 50%;
+  &::after {
+    content: none;
+  }
+  &::before {
+    content: none;
+  }
+}
+
+
+@media (max-width: (1400px)) {
+  .accordion_content {
+    input {
+      max-width: unset;
+      width: 100%;
+    }
+    .input-with-keypress-0 {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .input-with-keypress-1 {
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (max-width: (1290px)) {
+
+  .assortment .assortmentCatalog_items {
+    grid-template-columns: repeat(2, 340px);
+    justify-content: center;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: (960px)) {
+  .assortment_inner {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .assortment {
+    aside {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+  .assortment .assortmentCatalog_items {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-content: center;
+  }
+  .assortment_item {
+    max-width: 340px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
